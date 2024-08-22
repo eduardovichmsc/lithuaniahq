@@ -1,10 +1,11 @@
 "use client";
-import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { ArtistCard } from "./ArtistCard";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
 
 export const Artists = [
@@ -34,7 +35,7 @@ export const Artists = [
 export const Carousel = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
-	const handleSlideChange = (swiper) => {
+	const handleSlideChange = (swiper: SwiperType) => {
 		setActiveIndex(swiper.realIndex);
 	};
 

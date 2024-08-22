@@ -1,6 +1,5 @@
 // npm install framer-motion
 "use client";
-import { ParallaxText } from "@/shared/components/ui/parallaxtext";
 import {
 	motion,
 	MotionStyle,
@@ -10,7 +9,7 @@ import {
 	useTransform,
 } from "framer-motion";
 import Image from "next/image";
-import { FC, ReactNode, useRef } from "react";
+import { FC, useRef } from "react";
 
 const variants: MotionStyle = {};
 
