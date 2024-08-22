@@ -16,13 +16,13 @@ import {
 
 const SmoothScrollProvider = ({ children }: { children: ReactNode }) => {
 	// scroll container
-	const scrollRef = useRef(null);
+	const scrollRef = useRef<HTMLDivElement>(null);
 
 	// page scrollable height based on content length
 	const [pageHeight, setPageHeight] = useState(0);
 
 	// update scrollable height when browser is resizing
-	const resizePageHeight = useCallback((entries) => {
+	const resizePageHeight = useCallback((entries: any): void => {
 		for (let entry of entries) {
 			setPageHeight(entry.contentRect.height);
 		}
@@ -33,7 +33,11 @@ const SmoothScrollProvider = ({ children }: { children: ReactNode }) => {
 		const resizeObserver = new ResizeObserver((entries) =>
 			resizePageHeight(entries)
 		);
-		scrollRef && resizeObserver.observe(scrollRef.current);
+
+		if (scrollRef.current) {
+			resizeObserver.observe(scrollRef.current);
+		}
+
 		return () => resizeObserver.disconnect();
 	}, [scrollRef, resizePageHeight]);
 
