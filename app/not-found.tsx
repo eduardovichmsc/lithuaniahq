@@ -1,5 +1,3 @@
-import { Navbar } from "@/app/shared/components/Navbar";
-import { Footer } from "@/app/shared/components/Footer";
 import { ParallaxText } from "./shared/animated/ParallaxText";
 import Link from "next/link";
 

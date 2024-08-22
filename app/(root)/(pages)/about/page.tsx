@@ -54,10 +54,10 @@ export default function AboutPage() {
 						<div className="basis-1/2 flex flex-col justify-end text-neutral-500 gap-5 text-lg text-left">
 							<p>
 								Our big story began in 2017 with therelease of &apos;In My
-								Mind&apos; by Dynoro and Gigi D'Agostino, a track that reshaped
-								the music industry. Achieving over 2.7 billion streams, it
-								garnered Diamond status in Germany and France and topped global
-								charts.
+								Mind&apos; by Dynoro and Gigi D&apos;Agostino, a track that
+								reshaped the music industry. Achieving over 2.7 billion streams,
+								it garnered Diamond status in Germany and France and topped
+								global charts.
 							</p>
 							<p>
 								Following the success of Dynoro, we signed other talented
