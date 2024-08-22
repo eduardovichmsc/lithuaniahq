@@ -22,11 +22,14 @@ const SmoothScrollProvider = ({ children }: { children: ReactNode }) => {
 	const [pageHeight, setPageHeight] = useState(0);
 
 	// update scrollable height when browser is resizing
-	const resizePageHeight = useCallback((entries: any): void => {
-		for (let entry of entries) {
-			setPageHeight(entry.contentRect.height);
-		}
-	}, []);
+	const resizePageHeight = useCallback(
+		(entries: ResizeObserverEntry[]): void => {
+			for (let entry of entries) {
+				setPageHeight(entry.contentRect.height);
+			}
+		},
+		[]
+	);
 
 	// observe when browser is resizing
 	useLayoutEffect(() => {
@@ -60,7 +63,7 @@ const SmoothScrollProvider = ({ children }: { children: ReactNode }) => {
 				{children}
 			</motion.div>
 			{/* blank div that has a dynamic height based on the content's inherent height */}
-			{/* this is neccessary to allow the scroll container to scroll... */}
+			{/* this is necessary to allow the scroll container to scroll... */}
 			{/* ... using the browser's native scroll bar */}
 			<div style={{ height: pageHeight }} />
 		</>
