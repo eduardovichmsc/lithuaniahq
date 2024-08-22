@@ -40,13 +40,11 @@ const Links = [
 ];
 
 export const Navbar = () => {
-	const whenToActive = 0.13;
+	const whenToActive = 0.04;
 	const [hoveredLink, setHoveredLink] = useState("");
 
 	const { scrollYProgress } = useScroll();
 	const [scrollProgress, setScrollProgress] = useState(scrollYProgress.get());
-
-	console.log(scrollProgress);
 
 	useEffect(() => {
 		const unsubscribe = scrollYProgress.on("change", (latest) => {
@@ -59,9 +57,9 @@ export const Navbar = () => {
 		<nav className="fixed w-[100vw] z-50">
 			<div
 				className={`container flex items-center bg-transparent px-10 py-6 transition-all duration-300 ${
-					scrollProgress < whenToActive
-						? ""
-						: "bg-black bg-opacity-50 backdrop-blur-[2px]"
+					scrollProgress > whenToActive
+						? "bg-black bg-opacity-50 backdrop-blur-md"
+						: ""
 				}`}>
 				<div className="basis-1/2">
 					<Image

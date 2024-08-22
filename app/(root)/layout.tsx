@@ -7,12 +7,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<>
 			<Navbar />
-			{/* <SmoothScrollProvider> */}
-			<main className="relative w-full min-h-screen bg-black text-white overflow-x-hidden z-20">
-				{children}
-			</main>
-			<Footer />
-			{/* </SmoothScrollProvider> */}
+			<SmoothScrollProvider>
+				<main className="relative w-full min-h-screen bg-black text-white overflow-x-hidden z-20">
+					{children}
+				</main>
+				<Footer />
+			</SmoothScrollProvider>
 		</>
 	);
 }

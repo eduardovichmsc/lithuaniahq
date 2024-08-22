@@ -60,7 +60,9 @@ export const ArtistCard: FC<ArtistCardProps> = ({
 						</Link>
 					</div>
 					<div className="flex justify-between items-center">
-						<p className="text-6xl font-bold">{name}</p>
+						<Link href={"artists" + href} className="text-6xl font-bold">
+							{name}
+						</Link>
 						<Link href={href}>
 							<Image
 								src="/icons/arrow-45.svg"
