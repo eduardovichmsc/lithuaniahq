@@ -111,7 +111,13 @@ export const Artists: IArtist[] = [
 			additional: "",
 		},
 	},
-	{ name: "Dwin", image: "artists/dwin.jfif", href: "/dwin", popularSongs: [] },
+	{
+		name: "Dwin",
+		image: "artists/dwin.jfif",
+		href: "/dwin",
+		popularSongs: [],
+		info: { main: "", additional: "" },
+	},
 	{
 		name: "Brohm",
 		image: "artists/brohm.jpg",
@@ -132,7 +138,13 @@ export const Artists: IArtist[] = [
 			additional: "",
 		},
 	},
-	{ name: "Xd", image: "artists/xd.jpg", href: "/xd", popularSongs: [] },
+	{
+		name: "Xd",
+		image: "artists/xd.jpg",
+		href: "/xd",
+		popularSongs: [],
+		info: { main: "", additional: "" },
+	},
 	{
 		name: "Siadou",
 		image: "artists/siadou.jpg",
@@ -203,7 +215,13 @@ export const Artists: IArtist[] = [
 			additional: "",
 		},
 	},
-	{ name: "Trfn", image: "artists/trfn.jpg", href: "/trfn", popularSongs: [] },
+	{
+		name: "Trfn",
+		image: "artists/trfn.jpg",
+		href: "/trfn",
+		popularSongs: [],
+		info: { main: "", additional: "" },
+	},
 	{
 		name: "Scott Rill",
 		image: "artists/scott-rill.jpg",
